@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="text-center my-5">
+        <h1 class="display-4">Общая характеристика металлов</h1>
+        <p class="lead">Учебное мультимедийное пособие по химии 9 класс</p>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Общие свойства</h5>
+                    <p class="card-text">Физические свойства, кристаллическая решётка, положение в ПС</p>
+                    <a href="/properties" class="btn btn-primary">Перейти</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Химические свойства</h5>
+                    <p class="card-text">Ряд активности, реакции с кислородом, водой, кислотами</p>
+                    <a href="/chemical" class="btn btn-primary">Перейти</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Сплавы</h5>
+                    <p class="card-text">Классификация, примеры, применение</p>
+                    <a href="/alloys" class="btn btn-primary">Перейти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

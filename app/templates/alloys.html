@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mb-4">Сплавы</h1>
+
+    <section id="definition" class="mb-5">
+        <h2>Что такое сплавы?</h2>
+        <p>Сплавы — это вещества, полученные сплавлением двух или более металлов (или металла с неметаллом). В отличие от химических соединений, сплавы не имеют постоянного состава и не подчиняются закону постоянства состава.</p>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='animations/alloy_melting.gif') }}"
+                 alt="Процесс сплавления" class="img-fluid zoomable" style="max-width: 550px;">
+            <p class="mt-2">Процесс получения сплава.</p>
+        </div>
+    </section>
+
+    <section id="classification" class="mb-5">
+        <h2>Классификация сплавов</h2>
+        <ul>
+            <li><strong>Твёрдые растворы замещения</strong> — атомы одного металла замещают атомы другого (латунь Cu–Zn)</li>
+            <li><strong>Твёрдые растворы внедрения</strong> — мелкие атомы (C, N) находятся в пустотах решётки (сталь)</li>
+            <li><strong>Химические соединения</strong> — интерметаллиды (Fe₃C в чугуне)</li>
+            <li><strong>Механические смеси</strong> — эвтектические сплавы</li>
+        </ul>
+
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='animations/alloy_structure.gif') }}"
+                 alt="Структура сплава" class="img-fluid zoomable" style="max-width: 500px;">
+            <p class="mt-2">Микроструктура сплава.</p>
+
+            <audio id="classification-audio" src="{{ url_for('static', filename='audio/alloy_classification.mp3') }}" controls></audio>
+        </div>
+    </section>
+
+    <section id="examples" class="mb-5">
+        <h2>Важные сплавы и их применение</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Сплав</th>
+                    <th>Состав</th>
+                    <th>Свойства</th>
+                    <th>Применение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Сталь</td><td>Fe + 0,02–2% C</td><td>Прочная, твёрдая</td><td>Машины, мосты, инструменты</td></tr>
+                <tr><td>Чугун</td><td>Fe + 2–4% C</td><td>Хрупкий, хорошо льётся</td><td>Корпуса станков, батареи</td></tr>
+                <tr><td>Бронза</td><td>Cu + Sn</td><td>Коррозионностойкая</td><td>Подшипники, статуи</td></tr>
+                <tr><td>Латунь</td><td>Cu + Zn</td><td>Пластичная, красивая</td><td>Фурнитура, посуда</td></tr>
+                <tr><td>Дюралюминий</td><td>Al + Cu + Mg + Mn</td><td>Лёгкий и очень прочный</td><td>Самолёты, ракеты</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="properties-application" class="mb-5">
+        <h2>Свойства сплавов и их преимущества</h2>
+        <p>Сплавы обычно прочнее, твёрже, тугоплавче и устойчивее к коррозии, чем чистые металлы.</p>
+
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='animations/steel_microstructure.gif') }}"
+                 alt="Микроструктура стали" class="img-fluid zoomable" style="max-width: 500px;">
+            <p class="mt-2">Анимация: Микроструктура стали (перлит + феррит).</p>
+
+            <audio id="properties-audio" src="{{ url_for('static', filename='audio/alloy_properties.mp3') }}" controls></audio>
+        </div>
+    </section>
+
+    <div class="text-center mt-5">
+        <a href="/chemical" class="btn btn-secondary">← Назад: Химические свойства</a>
+        <a href="/test" class="btn btn-primary mx-3">Перейти к тесту →</a>
+    </div>
+{% endblock %}

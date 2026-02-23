@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mb-4">Химические свойства металлов</h1>
+
+    <section id="general-chemical" class="mb-5">
+        <h2>Общие химические свойства</h2>
+        <p>Металлы — сильные восстановители, легко отдают электроны. Они образуют оксиды, гидроксиды и соли. Активность зависит от положения в ряду напряжений (ряда активности).</p>
+        <div class="text-center">
+            <!-- Анимация: Интерактивный ряд активности (GIF или SVG с анимацией) -->
+            <img src="{{ url_for('static', filename='animations/activity_series.gif') }}" alt="Ряд активности" class="img-fluid" style="max-width: 600px;">
+            <p class="mt-2">Ряд активности металлов.</p>
+        </div>
+    </section>
+
+    <section id="activity-series" class="mb-5">
+        <h2>Ряд активности металлов</h2>
+        <p>Ряд: K > Na > Ca > Mg > Al > Zn > Fe > Sn > Pb > H > Cu > Ag > Au. Слева — активные (вытесняют H из кислот), справа — инертные.</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr><th>Металл</th><th>Активность</th><th>Пример</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>K, Na</td><td>Очень активные</td><td>Реагируют с водой</td></tr>
+                <tr><td>Mg, Al, Zn</td><td>Средние</td><td>Реагируют с кислотами</td></tr>
+                <tr><td>Cu, Ag</td><td>Низкая</td><td>Не реагируют с кислотами</td></tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <!-- Аудио с controls -->
+            <audio id="activity-audio" src="{{ url_for('static', filename='audio/activity_series.mp3') }}" controls></audio>
+            <p class="mt-2">Аудио: Озвучка ряда активности.</p>
+        </div>
+    </section>
+
+    <section id="reactions-oxygen" class="mb-5">
+        <h2>Взаимодействие с кислородом</h2>
+        <p>Большинство металлов окисляются: 4Na + O₂ → 2Na₂O; 2Mg + O₂ → 2MgO (горение).</p>
+        <div class="text-center">
+            <!-- Центральное окно анимации -->
+            <img src="{{ url_for('static', filename='animations/magnesium_burning.gif') }}" alt="Горение магния" class="img-fluid" style="max-width: 500px;">
+            <p class="mt-2">Горение магния в кислороде.</p>
+        </div>
+    </section>
+
+    <section id="reactions-water" class="mb-5">
+        <h2>Взаимодействие с водой</h2>
+        <p>Активные металлы: 2Na + 2H₂O → 2NaOH + H₂↑. Менее активные — только при нагреве (Fe + H₂O → Fe₃O₄ + H₂).</p>
+        <div class="text-center">
+            <!-- Анимация реакции -->
+            <img src="{{ url_for('static', filename='animations/sodium_water.gif') }}" alt="Na с водой" class="img-fluid" style="max-width: 500px;">
+            <p class="mt-2">Реакция натрия с водой.</p>
+            <!-- Аудио с controls -->
+            <audio id="water-audio" src="{{ url_for('static', filename='audio/water_reaction.mp3') }}" controls></audio>
+            <p class="mt-2">Аудио: Описание реакции с водой.</p>
+        </div>
+    </section>
+
+    <section id="reactions-acids" class="mb-5">
+        <h2>Взаимодействие с кислотами и солями</h2>
+        <p>С кислотами: Zn + 2HCl → ZnCl₂ + H₂↑. С солями: Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag (вытеснение).</p>
+        <div class="text-center">
+            <!-- Анимация -->
+            <img src="{{ url_for('static', filename='animations/zinc_acid.gif') }}" alt="Zn с кислотой" class="img-fluid" style="max-width: 500px;">
+            <p class="mt-2">Реакция цинка с соляной кислотой.</p>
+        </div>
+    </section>
+
+    <div class="text-center">
+        <a href="/alloys" class="btn btn-secondary">Далее: Сплавы</a>
+        <a href="/properties" class="btn btn-secondary mx-2">Назад: Общие свойства</a>
+    </div>
+{% endblock %}

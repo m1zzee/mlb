@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mb-4">Проверка знаний: Металлы</h1>
+    <p class="text-center lead mb-5">Тест состоит из 10 вопросов по темам: общие свойства, химические свойства и сплавы. Выберите ответы и нажмите "Проверить".</p>
+
+    <form id="quiz-form">
+        <!-- Вопрос 1: Выбор одного ответа (Общие свойства) -->
+        <section class="mb-5">
+            <h3>1. Какое свойство характерно для металлов благодаря "электронному газу"?</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+                <label class="form-check-label" for="q1a">Низкая теплопроводность</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+                <label class="form-check-label" for="q1b">Высокая электропроводность</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+                <label class="form-check-label" for="q1c">Хрупкость</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 2: True/False (Общие свойства) -->
+        <section class="mb-5">
+            <h3>2. Металлы занимают правую часть Периодической системы элементов.</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="q2" id="q2true" value="true">
+                <label class="form-check-label" for="q2true">Верно</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="q2" id="q2false" value="false">
+                <label class="form-check-label" for="q2false">Неверно</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 3: Множественный выбор (Химические свойства) -->
+        <section class="mb-5">
+            <h3>3. Какие металлы реагируют с водой при комнатной температуре? (Выберите все подходящие)</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q3" id="q3a" value="a">
+                <label class="form-check-label" for="q3a">K и Na</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q3" id="q3b" value="b">
+                <label class="form-check-label" for="q3b">Cu и Ag</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q3" id="q3c" value="c">
+                <label class="form-check-label" for="q3c">Mg и Ca</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 4: Новый radio (Химические свойства, вместо сопоставления) -->
+        <section class="mb-5">
+            <h3>4. Какова реакция магния с кислородом?</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4a" value="a">
+                <label class="form-check-label" for="q4a">4Mg + O₂ → 2Mg₂O</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4b" value="b">
+                <label class="form-check-label" for="q4b">2Mg + O₂ → 2MgO</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4c" value="c">
+                <label class="form-check-label" for="q4c">Mg + O₂ → MgO₂</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 5: Выбор одного (Сплавы) -->
+        <section class="mb-5">
+            <h3>5. Какой сплав содержит Fe + 0,02–2% C?</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5a" value="a">
+                <label class="form-check-label" for="q5a">Чугун</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5b" value="b">
+                <label class="form-check-label" for="q5b">Сталь</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5c" value="c">
+                <label class="form-check-label" for="q5c">Бронза</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 6: True/False (Сплавы) -->
+        <section class="mb-5">
+            <h3>6. Сплавы всегда имеют постоянный состав, как химические соединения.</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="q6" id="q6true" value="true">
+                <label class="form-check-label" for="q6true">Верно</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="q6" id="q6false" value="false">
+                <label class="form-check-label" for="q6false">Неверно</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 7: Множественный (Химические свойства) -->
+        <section class="mb-5">
+            <h3>7. Какие металлы стоят слева от H в ряду активности? (Все подходящие)</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q7" id="q7a" value="a">
+                <label class="form-check-label" for="q7a">Zn и Fe</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q7" id="q7b" value="b">
+                <label class="form-check-label" for="q7b">Cu и Ag</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q7" id="q7c" value="c">
+                <label class="form-check-label" for="q7c">Al и Mg</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 8: Выбор одного (Общие свойства) -->
+        <section class="mb-5">
+            <h3>8. Какой металл жидкий при комнатной температуре?</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q8" id="q8a" value="a">
+                <label class="form-check-label" for="q8a">Fe</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q8" id="q8b" value="b">
+                <label class="form-check-label" for="q8b">Hg</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q8" id="q8c" value="c">
+                <label class="form-check-label" for="q8c">Au</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 9: Новый checkbox (Сплавы, вместо сопоставления) -->
+        <section class="mb-5">
+            <h3>9. Какие свойства обычно улучшаются в сплавах по сравнению с чистыми металлами? (Выберите все подходящие)</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q9" id="q9a" value="a">
+                <label class="form-check-label" for="q9a">Прочность</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q9" id="q9b" value="b">
+                <label class="form-check-label" for="q9b">Хрупкость</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="q9" id="q9c" value="c">
+                <label class="form-check-label" for="q9c">Устойчивость к коррозии</label>
+            </div>
+        </section>
+
+        <!-- Вопрос 10: Выбор одного (Химические свойства) -->
+        <section class="mb-5">
+            <h3>10. Какое уравнение описывает вытеснение?</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q10" id="q10a" value="a">
+                <label class="form-check-label" for="q10a">Zn + 2HCl → ZnCl₂ + H₂</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q10" id="q10b" value="b">
+                <label class="form-check-label" for="q10b">Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q10" id="q10c" value="c">
+                <label class="form-check-label" for="q10c">2Mg + O₂ → 2MgO</label>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <button type="button" id="submit-quiz" class="btn btn-primary btn-lg">Проверить ответы</button>
+        </div>
+    </form>
+
+    <div id="quiz-results" class="mt-5" style="display: none;">
+        <h2 class="text-center">Результаты</h2>
+        <p id="score" class="text-center lead"></p>
+        <!-- Здесь JS вставит объяснения -->
+    </div>
+
+    <!-- Аудио для успеха/ошибки (опционально) -->
+    <audio id="correct-sound" src="{{ url_for('static', filename='audio/correct.mp3') }}"></audio>
+    <audio id="wrong-sound" src="{{ url_for('static', filename='audio/wrong.mp3') }}"></audio>
+{% endblock %}

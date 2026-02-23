@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mb-4">Общие свойства металлов</h1>
+
+    <section id="position-ps" class="mb-5">
+        <h2>Положение металлов в Периодической системе</h2>
+        <p>Металлы занимают левую часть Периодической системы элементов (ПС). Их атомы имеют 1–3 электрона на внешнем уровне, что делает их хорошими восстановителями. Неметаллы — справа, с 4–8 электронами.</p>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='images/periodic_table.gif') }}" alt="Периодическая система" class="img-fluid" style="max-width: 600px;">
+            <p class="mt-2">Выделение металлов в ПС.</p>
+        </div>
+    </section>
+
+    <section id="physical-properties" class="mb-5">
+        <h2>Физические свойства</h2>
+        <ul>
+            <li><strong>Блеск:</strong> Металлический блеск из-за отражения света свободными электронами.</li>
+            <li><strong>Ковкость и пластичность:</strong> Легко деформируются без разрушения (например, золото можно раскатать в фольгу).</li>
+            <li><strong>Тепло- и электропроводность:</strong> Высокая благодаря "электронному газу".</li>
+            <li><strong>Плотность и температуры:</strong> Варьируются (Na — лёгкий, плавится при 98°C; W — тугоплавкий, 3422°C).</li>
+        </ul>
+        <div class="text-center">
+            <!-- Аудио с controls для перемотки/паузы -->
+            <audio id="properties-audio" src="{{ url_for('static', filename='audio/physical_properties.mp3') }}" controls></audio>
+        </div>
+    </section>
+
+    <section id="crystal-lattice" class="mb-5">
+        <h2>Кристаллическая решётка металлов</h2>
+        <p>Металлы имеют металлическую связь: положительные ионы в узлах решётки, окружённые "электронным газом". Это обеспечивает пластичность и проводимость.</p>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='animations/metal_lattice.gif') }}" alt="Анимация решётки" class="img-fluid" style="max-width: 500px;">
+            <p class="mt-2">Движение электронов в металлической решётке.</p>
+            <!-- Аудио с controls -->
+            <audio id="metal-audio" src="{{ url_for('static', filename='audio/lattice_explain.mp3') }}" controls></audio>
+        </div>
+    </section>
+
+    <section id="comparison" class="mb-5">
+        <h2>Сравнение металлов и неметаллов</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr><th>Свойство</th><th>Металлы</th><th>Неметаллы</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Внешний вид</td><td>Блестящие</td><td>Тусклые</td></tr>
+                <tr><td>Проводимость</td><td>Высокая</td><td>Низкая</td></tr>
+                <tr><td>Состояние</td><td>Твёрдые (кроме Hg)</td><td>Газы, жидкости, твёрдые</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="text-center">
+        <a href="/chemical" class="btn btn-secondary">Далее: Химические свойства</a>
+    </div>
+{% endblock %}
